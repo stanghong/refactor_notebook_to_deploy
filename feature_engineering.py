@@ -14,7 +14,7 @@ def multual_info(X_train, y_train):
     sel_seven_cols = SelectKBest(mutual_info_classif, k=7)
     res=sel_seven_cols.fit(X_train, y_train.values.ravel())
 
-    return res.columns
+    return
 
 
 def print_test_results(y_test, rfc_predict, rfc_cv_score):
