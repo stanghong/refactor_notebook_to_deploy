@@ -1,0 +1,16 @@
+{
+  "training_data_path": "Medical_No_Shows.csv",
+  "model_input_features": [
+    "Age",
+    "MedicaidIND",
+    "Hypertension",
+    "Diabetes",
+    "Alcoholism",
+    "Disability",
+    "SMS_received",
+    "time_diff_days",
+    "GenderC",
+    "appt_wd",
+    "schedule_wd"
+  ]
+}
