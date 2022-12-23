@@ -12,5 +12,32 @@
     "GenderC",
     "appt_wd",
     "schedule_wd"
-  ]
+  ],
+  "model_params" : {
+    "random_forest": {
+        "model": "RandomForestClassifier()",
+        "params": {
+            "n_estimators": [100],
+            "max_features": ["auto"],
+            "min_samples_leaf": [2]
+
+        }
+    },
+    "logistic_regression": {
+        "model": "LogisticRegression()",
+        "params": {
+            "C": [1, 5, 10]
+        }
+    },
+    "naive_bayes_gaussian": {
+        "model": "GaussianNB()",
+        "params": {}
+    },
+    "decision_tree": {
+        "model": "DecisionTreeClassifier()",
+        "params": {
+            "criterion": ["gini", "entropy"]
+        }
+    }
+}
 }

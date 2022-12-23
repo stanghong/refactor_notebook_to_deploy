@@ -21,35 +21,8 @@ with open(config_path) as f:
 
 training_data_s3_path = model_config["training_data_path"]
 model_input_features = model_config["model_input_features"]
+model_params = model_config["model_params"]
 
-model_params = {
-    'random_forest': {
-        'model': RandomForestClassifier(),
-        'params': {
-            'n_estimators': [100],
-            'max_features': ['auto'],
-            'min_samples_leaf': [2]
-
-        }
-    },
-    'logistic_regression': {
-        'model': LogisticRegression(solver='liblinear', multi_class='auto'),
-        'params': {
-            'C': [1, 5, 10]
-        }
-    },
-    'naive_bayes_gaussian': {
-        'model': GaussianNB(),
-        'params': {}
-    },
-    'decision_tree': {
-        'model': DecisionTreeClassifier(),
-        'params': {
-            'criterion': ['gini', 'entropy'],
-
-        }
-    }
-}
 target = ['NoShow']
 
 if __name__ == "__main__":
